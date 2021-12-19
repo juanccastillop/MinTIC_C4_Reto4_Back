@@ -83,6 +83,12 @@ public class CookwareService {
         }).orElse(false);
         return aBoolean;
     }
+
+   	public List<Cookware> getByPrice(double price){
+		return cookwareRepository.getByPrice(price);
+	}    
     
-    
+    public List<Cookware> getByDescriptionContains(String description){
+		return cookwareRepository.getByDescriptionContains(description);
+	}
 }

@@ -33,4 +33,13 @@ public class CookwareRepository {
     public void delete(Cookware cook) {
         cookwareCrudRepository.delete(cook);
     }
+
+    public List<Cookware> getByPrice(double price){
+		return cookwareCrudRepository.findByPrice(price);
+	}
+
+    public List<Cookware> getByDescriptionContains(String description){
+		return cookwareCrudRepository.findByDescriptionContainingIgnoreCase(description);
+	}
+
 }
