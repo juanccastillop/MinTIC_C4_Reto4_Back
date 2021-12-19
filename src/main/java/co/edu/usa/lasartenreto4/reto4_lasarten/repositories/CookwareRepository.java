@@ -35,7 +35,7 @@ public class CookwareRepository {
     }
 
     public List<Cookware> getByPrice(double price){
-		return cookwareCrudRepository.findByPrice(price);
+		return cookwareCrudRepository.findByPriceLessThanEqual(price);
 	}
 
     public List<Cookware> getByDescriptionContains(String description){
